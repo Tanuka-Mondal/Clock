@@ -1,0 +1,126 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 30px;
+  }
+  
+  body {
+      height: 100%;
+      background: linear-gradient(45deg, rgb(248, 124, 124),rgb(233, 185, 98),rgb(247, 247, 118),rgb(144, 241, 144),rgb(142, 142, 238),rgb(207, 155, 245),rgb(241, 193, 241)); 
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+  }
+  
+  .clock {
+      height: 400px;
+      width: 400px;
+      background-color: rgb(255,255,255);
+      background-image: url("Mickey_Mouse.jpg");
+      border-radius: 50%;
+      border: 10px solid red;
+      position: relative;
+      color: rgb(243, 21, 206);
+  }
+  
+  .clock .digit{
+      --degree: 0;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      transform: rotate(var(--degree));
+  }
+  
+  .clock .d1{
+      --degree:30deg;
+      color: rgb(243, 21, 206);
+  }
+  .clock .d2{
+      --degree:60deg;
+      color: rgb(4, 20, 252);
+  }
+  .clock .d3{
+      --degree:90deg;
+      color: rgb(4, 20, 252);
+  }
+  .clock .d4{
+      --degree:120deg;
+      color: rgb(4, 20, 252);
+  }
+  .clock .d5{
+      --degree:150deg;
+      color: rgb(4, 20, 252);
+  }
+  .clock .d6{
+      --degree:180deg;
+      color: rgb(4, 20, 252);
+  }
+  .clock .d7{
+      --degree:210deg;
+      color: rgb(4, 20, 252);
+  }
+  .clock .d8{
+      --degree:240deg;
+      color: rgb(243, 21, 206);
+  }
+  .clock .d9{
+      --degree:270deg;
+      color: rgb(243, 21, 206);
+  }
+  .clock .d10{
+      --degree:300deg;
+      color: rgb(243, 21, 206);
+  }
+  .clock .d11{
+      --degree:330deg;
+      color: rgb(243, 21, 206);
+  }
+  
+  .clock .hand {
+      --time: 0;
+      position: absolute;
+      bottom: 50%;
+      left: 50%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      transform-origin: bottom;
+      transform: translateX(-50%) rotate(calc(var(--time) * 1deg));
+  }
+  
+  .clock::after {
+      content: "";
+      position: absolute;
+      background-color: red;
+      z-index: 11;
+      width: 15px;
+      height: 15px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      border: solid 0.5px black;
+      border-radius: 50%;
+  }
+  
+  .clock .hand.hr{
+      width: 10px;
+      height: 35%;
+      background-color: red;
+  }
+  
+  .clock .hand.min{
+      width: 6px;
+      height: 42%;
+      background-color: blue ;
+  }
+  
+  .clock .hand.sec{
+      width: 3px;
+      height: 48%;
+      background-color: green;
+      z-index:10;
+  }
