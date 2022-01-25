@@ -17,8 +17,8 @@
   }
   
   .clock {
-      height: 400px;
-      width: 400px;
+      height: 50%;
+      width: 50%;
       background-color: rgb(255,255,255);
       background-image: url("Mickey_Mouse.jpg");
       border-radius: 50%;
