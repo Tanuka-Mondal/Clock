@@ -139,3 +139,14 @@ body {
     background-color: green;
     z-index:10;
 }
+
+@media (max-width: 520px) {
+    .container{
+        height: 0.1px;
+        width: 0.11px;
+        bottom: 50%;
+        right: 50%;
+        
+    }
+    
+}
